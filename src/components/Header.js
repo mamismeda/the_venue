@@ -1,40 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import {AppBar, Toolbar, IconButton} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
+import { AppBar, Toolbar, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import SideDrawer from './SideDrawer';
-
+import SideDrawer from "./SideDrawer";
 
 const Header = () => {
+
+    const [drawerOpen, setDrawerOpen] = useState(false)
+
   return (
     <AppBar
-    position="fixed"
-    style={{
-        backgroundColor:'#2f2f2f',
-        boxShadow:'none',
-        padding:'10px 0px'
-    }}
+      position="fixed"
+      style={{
+        backgroundColor: "#2f2f2f",
+        boxShadow: "none",
+        padding: "10px 0px",
+      }}
     >
-        <Toolbar>
+      <Toolbar>
+        <div className="header_logo">
+          <div className="font_righteous header_logo_venue">The venue</div>
+          <div className="header_logo_title">Musical Events</div>
+        </div>
 
-            <div className="header_logo">
-                <div className="font_righteous header_logo_venue">The venue</div>
-                <div className="header_logo_title">Musical Events</div>
-            </div>
+        <IconButton aria-label="Menu" color="inherit">
+          <MenuIcon />
+        </IconButton>
 
-            <IconButton
-              aria-label="Menu"
-              color="inherit"
-            >
-                <MenuIcon/>
-
-            </IconButton>
-         
-         <SideDrawer />
-         
-        </Toolbar>
-
+        <SideDrawer />
+      </Toolbar>
     </AppBar>
   );
 };
