@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Featured from './components/featured';
 import VenueNfo from "./components/venueNfo";
+import Highlights from "./components/highlights";
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
       </>
       <>
        <VenueNfo />
+      </>
+      <>
+       <Highlights />
       </>
 
       <div style={{backgroundColor: 'red', height:'800px'}}></div>
