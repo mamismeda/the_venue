@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
+import MyButton from "../utils/MyButton";
 
 const Discount = () => {
   const end = 30;
@@ -46,6 +47,16 @@ const Discount = () => {
               dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
               aspernatur aut
             </p>
+
+            <MyButton
+              text="Purchase tickets"
+              link="http://google.com"
+              style={{
+                background: "#ffa800",
+                color: "#ffffff",
+              }}
+            iconTicket={true}
+            />
           </div>
         </Slide>
       </div>
